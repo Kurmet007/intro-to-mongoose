@@ -44,7 +44,7 @@ async function mainMenu() {
       case "5":
 
         quit = true;
-        console.log(`Goodbye, ${username}! 👋`);
+        console.log(`Goodbye, ${username}!`);
         mongoose.connection.close();
         break;
       default:
@@ -59,7 +59,7 @@ async function createCustomer() {
 
   const customer = new Customer({ name, age });
   await customer.save();
-  console.log("✅ Customer created!");
+  console.log("Customer created!");
 }
 
 async function viewCustomers() {
